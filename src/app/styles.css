@@ -11,13 +11,14 @@ body {
   height: 100%;
   background-color: #000;
   color: #fff;
-  font-family: sans-serif;
+  font-family: var(--font-source-sans-3), sans-serif;
   line-height: 1.5;
   text-size-adjust: none;
 }
 
 h1,
 h2 {
+  font-family: var(--font-poppins);
   text-wrap: balance;
 }
 
@@ -32,6 +33,10 @@ button {
   color: inherit;
   font: inherit;
   cursor: pointer;
+}
+
+code {
+  font-family: var(--font-source-code-pro);
 }
 
 ul[role='list'] {
