@@ -4,6 +4,7 @@
   --color-pencil: #1c222e;
   --color-ink: #0000ff;
   --color-comment: #7a91b8;
+  --max-width-card: 60ch;
 }
 
 *,
@@ -17,8 +18,8 @@
 html,
 body {
   height: 100%;
-  background-color: #000;
-  color: #fff;
+  background-color: var(--color-bg);
+  color: var(--color-text);
   font-family: var(--font-source-sans-3), sans-serif;
   line-height: 1.5;
   text-size-adjust: none;

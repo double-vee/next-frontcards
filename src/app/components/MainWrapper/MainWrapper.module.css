@@ -1,0 +1,21 @@
+.wrapper {
+  min-height: 100%;
+  width: 100%;
+  margin-inline: auto;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 550px) {
+  .wrapper {
+    max-width: var(--max-width-card);
+    padding-top: 4rem;
+  }
+}
+
+@media (min-width: 1050px) {
+  .wrapper {
+    max-width: 1250px;
+  }
+}
