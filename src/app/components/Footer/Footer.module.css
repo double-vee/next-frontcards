@@ -1,0 +1,6 @@
+.footer {
+  margin-top: auto;
+  color: var(--color-comment);
+  font-family: var(--font-poppins);
+  font-size: 0.75rem;
+}

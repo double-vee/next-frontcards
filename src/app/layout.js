@@ -1,6 +1,7 @@
 import { Poppins, Source_Sans_3, Source_Code_Pro } from 'next/font/google';
 
 import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
 
 import './styles.css';
 
@@ -34,6 +35,7 @@ export default function RootLayout({ children }) {
       <body>
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );
