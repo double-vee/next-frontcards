@@ -1,6 +1,38 @@
-.categorySection {
-  width: 100%;
+.categoryList {
   display: flex;
   flex-flow: row wrap;
   gap: 0.5rem;
+}
+
+.category {
+  border-radius: 6px;
+  background-color: var(--color-text);
+  color: var(--color-pencil);
+  font-family: var(--font-poppins);
+  font-size: 1.125rem;
+  font-weight: 600;
+  overflow: hidden;
+}
+
+.category a {
+  display: block;
+  padding: 0.5rem 0.75rem;
+}
+
+.react:hover,
+.react:focus {
+  background-color: var(--color-light-blue);
+}
+
+.javascript:hover,
+.javascript:focus,
+.methods:hover,
+.methods:focus {
+  background-color: var(--color-yellow);
+}
+
+@media (min-width: 550px) {
+  .category a {
+    font-size: 1.25rem;
+  }
 }
