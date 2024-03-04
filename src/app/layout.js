@@ -1,5 +1,7 @@
 import { Poppins, Source_Sans_3, Source_Code_Pro } from 'next/font/google';
 
+import Header from './components/Header/Header';
+
 import './styles.css';
 
 const poppins = Poppins({
@@ -29,7 +31,10 @@ export default function RootLayout({ children }) {
       lang="en"
       className={`${poppins.variable} ${source_sans_3.variable} ${source_code_pro.variable}`}
     >
-      <body>{children}</body>
+      <body>
+        <Header />
+        {children}
+      </body>
     </html>
   );
 }

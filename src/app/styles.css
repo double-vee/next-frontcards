@@ -1,3 +1,11 @@
+:root {
+  --color-bg: #0d1118;
+  --color-text: #fffff4;
+  --color-pencil: #1c222e;
+  --color-ink: #0000ff;
+  --color-comment: #7a91b8;
+}
+
 *,
 *::before,
 *::after {
