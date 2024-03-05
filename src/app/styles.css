@@ -27,6 +27,13 @@ body {
   text-size-adjust: none;
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+}
+
 h1,
 h2 {
   font-family: var(--font-poppins);
@@ -52,4 +59,10 @@ code {
 
 ul[role='list'] {
   list-style: none;
+}
+
+@media (min-width: 550px) {
+  main {
+    margin-bottom: 3.5rem;
+  }
 }
