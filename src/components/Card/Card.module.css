@@ -11,7 +11,12 @@
   padding: 1rem;
   color: var(--color-pencil);
   backface-visibility: hidden;
-  transition: 300ms ease-in-out;
+  perspective: 1600px;
+  transition: 250ms ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-2px);
 }
 
 .front.javascript,
@@ -72,6 +77,22 @@
 }
 
 @media (min-width: 550px) {
+  .card {
+    transform-style: preserve-3d;
+  }
+
+  .front.rotate {
+    rotate: 1 0.1 0.2 180deg;
+  }
+
+  .back {
+    rotate: 1 0.1 0.2 -180deg;
+  }
+
+  .back.rotate {
+    rotate: 1 0.1 0.2 0deg;
+  }
+
   .cardTitle {
     font-size: 1.25rem;
   }
