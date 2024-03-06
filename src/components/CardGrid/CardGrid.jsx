@@ -1,4 +1,5 @@
 import { CARDS } from '@/data';
+import Card from '@/components/Card/Card';
 
 import style from './CardGrid.module.css';
 
@@ -8,7 +9,10 @@ export default function CardGrid({ slug }) {
   return (
     <section className={style.cardSection}>
       {filteredCards.map((card) => (
-        <article key={card.front}>{card.front}</article>
+        <Card
+          key={card.front}
+          {...card}
+        />
       ))}
     </section>
   );

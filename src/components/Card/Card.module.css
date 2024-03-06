@@ -1,0 +1,60 @@
+.card {
+  width: 100%;
+  border-radius: 12px;
+  padding: 1rem;
+  color: var(--color-pencil);
+}
+
+.front.javascript,
+.front.methods {
+  background-color: var(--color-yellow);
+}
+
+.front.react {
+  background-color: var(--color-light-blue);
+}
+
+.back {
+  background-color: var(--color-bg-card);
+  text-align: left;
+}
+
+.back code {
+  display: inline-block;
+  border-radius: 4px;
+  padding: 1px 4px;
+  background-color: var(--color-bg-code);
+  font-size: 0.938rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.cardTitle {
+  font-size: 1.125rem;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.back .cardTitle {
+  margin-top: -0.125rem;
+  margin-bottom: 0.75rem;
+}
+
+.cardNotes {
+  padding-left: 1.375rem;
+}
+
+.cardNote:not(:last-child) {
+  margin-bottom: 0.5rem;
+}
+
+.cardNote::marker {
+  content: '✏️\2002';
+  font-size: 0.75rem;
+}
+
+@media (min-width: 550px) {
+  .cardTitle {
+    font-size: 1.25rem;
+  }
+}
