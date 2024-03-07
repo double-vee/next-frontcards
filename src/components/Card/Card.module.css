@@ -11,7 +11,9 @@
   color: var(--color-pencil);
   backface-visibility: hidden;
   perspective: 1600px;
-  transition: 250ms ease-in-out;
+  transform-style: preserve-3d;
+  transition: rotate 0.35s cubic-bezier(0.2, 0.2, 0.4, 0.8),
+    transform 0.25s cubic-bezier(0.2, 0.2, 0.4, 0.8);
 }
 
 .card:hover {
@@ -76,10 +78,6 @@
 }
 
 @media (min-width: 550px) {
-  .card {
-    transform-style: preserve-3d;
-  }
-
   .front.rotate {
     rotate: 1 0.1 0.2 180deg;
   }

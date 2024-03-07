@@ -12,7 +12,7 @@ export default function Card({ category, front, back }) {
   const backRef = useRef();
 
   useEffect(() => {
-    setCardHeight(backRef.current.scrollHeight);
+    setCardHeight(backRef.current.scrollHeight + 16);
   }, []);
 
   const className = CATEGORIES.find((item) => item.slug === category).className;
@@ -23,7 +23,7 @@ export default function Card({ category, front, back }) {
 
   return (
     <article
-      style={{ height: cardHeight + 16 }}
+      style={{ height: cardHeight }}
       className={style.wrapper}
       onClick={() => setIsFlipped(!isFlipped)}
     >
