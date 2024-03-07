@@ -1,12 +1,19 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { CATEGORIES } from '@/constants';
 
 import style from './Card.module.css';
 
 export default function Card({ category, front, back }) {
   const [isFlipped, setIsFlipped] = useState(false);
+  const [cardHeight, setCardHeight] = useState(100);
+
+  const backRef = useRef();
+
+  useEffect(() => {
+    setCardHeight(backRef.current.scrollHeight);
+  }, []);
 
   const className = CATEGORIES.find((item) => item.slug === category).className;
 
@@ -16,13 +23,17 @@ export default function Card({ category, front, back }) {
 
   return (
     <article
+      style={{ height: cardHeight + 16 }}
       className={style.wrapper}
       onClick={() => setIsFlipped(!isFlipped)}
     >
       <button className={`${cardClassName} ${style.front}`}>
         <h2 className={style.cardTitle}>{front}</h2>
       </button>
-      <button className={`${cardClassName} ${style.back}`}>
+      <button
+        className={`${cardClassName} ${style.back}`}
+        ref={backRef}
+      >
         <h2 className={style.cardTitle}>{front}</h2>
         <ul
           className={style.cardNotes}
