@@ -12,7 +12,18 @@ export default function Card({ category, front, back }) {
   const backRef = useRef();
 
   useEffect(() => {
-    setCardHeight(backRef.current.scrollHeight + 16);
+    setCardHeight(backRef.current.scrollHeight);
+  }, []);
+
+  useEffect(() => {
+    const observer = new ResizeObserver((entries) => {
+      const height = entries[0].contentRect.height + 32;
+      setCardHeight(height);
+    });
+
+    observer.observe(backRef.current);
+
+    return () => observer.disconnect();
   }, []);
 
   const className = CATEGORIES.find((item) => item.slug === category).className;
@@ -30,24 +41,26 @@ export default function Card({ category, front, back }) {
       <button className={`${cardClassName} ${style.front}`}>
         <h2 className={style.cardTitle}>{front}</h2>
       </button>
-      <button
-        className={`${cardClassName} ${style.back}`}
-        ref={backRef}
-      >
-        <h2 className={style.cardTitle}>{front}</h2>
-        <ul
-          className={style.cardNotes}
-          role="list"
+      <button className={`${cardClassName} ${style.back}`}>
+        <div
+          className={style.backWrapper}
+          ref={backRef}
         >
-          {back.map((note, i) => (
-            <li
-              key={`${i}-${Date.now()}`}
-              className={style.cardNote}
-            >
-              {note}
-            </li>
-          ))}
-        </ul>
+          <h2 className={style.cardTitle}>{front}</h2>
+          <ul
+            className={style.cardNotes}
+            role="list"
+          >
+            {back.map((note, i) => (
+              <li
+                key={`${i}-${Date.now()}`}
+                className={style.cardNote}
+              >
+                {note}
+              </li>
+            ))}
+          </ul>
+        </div>
       </button>
     </article>
   );

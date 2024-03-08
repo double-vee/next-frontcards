@@ -7,7 +7,6 @@
   width: 100%;
   height: 100%;
   border-radius: 12px;
-  padding: 1rem;
   color: var(--color-pencil);
   backface-visibility: hidden;
   perspective: 1600px;
@@ -18,6 +17,11 @@
 
 .card:hover {
   transform: translateY(-2px);
+}
+
+.front,
+.backWrapper {
+  padding: 1rem;
 }
 
 .front.javascript,
