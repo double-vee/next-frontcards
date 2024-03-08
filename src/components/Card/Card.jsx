@@ -38,10 +38,20 @@ export default function Card({ category, front, back }) {
       className={style.wrapper}
       onClick={() => setIsFlipped(!isFlipped)}
     >
-      <button className={`${cardClassName} ${style.front}`}>
+      <button
+        className={`${cardClassName} ${style.front}`}
+        aria-label="Show notes"
+        aria-hidden={isFlipped ? 'true' : 'false'}
+        tabIndex={isFlipped ? -1 : 0}
+      >
         <h2 className={style.cardTitle}>{front}</h2>
       </button>
-      <button className={`${cardClassName} ${style.back}`}>
+      <button
+        className={`${cardClassName} ${style.back}`}
+        aria-label="Hide notes"
+        aria-hidden={isFlipped ? 'false' : 'true'}
+        tabIndex={isFlipped ? 0 : -1}
+      >
         <div
           className={style.backWrapper}
           ref={backRef}
