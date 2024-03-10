@@ -21,7 +21,7 @@
 
 .front,
 .backWrapper {
-  padding: 1rem;
+  padding: 1.25rem;
 }
 
 .front.javascript,
@@ -45,16 +45,6 @@
 
 .back.rotate {
   rotate: x 0deg;
-}
-
-.back code {
-  display: inline-block;
-  border-radius: 4px;
-  padding: 1px 4px;
-  background-color: var(--color-bg-code);
-  font-size: 0.938rem;
-  font-weight: 600;
-  line-height: 1.2;
 }
 
 .cardTitle {

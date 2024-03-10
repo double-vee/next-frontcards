@@ -2,6 +2,7 @@
   --color-bg: #0d1118;
   --color-bg-card: #feffe6;
   --color-bg-code: #edede0;
+  --color-bg-snippet: #1a202d;
   --color-light-blue: #98ecff;
   --color-yellow: #fff6a0;
   --color-text: #fffff4;
@@ -62,10 +63,21 @@ ul[role='list'] {
 
 code {
   font-family: var(--font-source-code-pro);
+  font-size: 0.938rem;
+}
+
+code:not(.term, pre code) {
+  display: inline-block;
+  border-radius: 4px;
+  padding: 1px 4px;
+  background-color: var(--color-bg-code);
+  font-weight: 600;
+  line-height: 1.2;
 }
 
 .term {
   color: var(--color-ink);
+  font-size: 1rem;
   font-weight: 600;
 }
 

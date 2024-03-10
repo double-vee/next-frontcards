@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect, useRef } from 'react';
-import { CATEGORIES } from '@/constants';
+import { CARD_PADDING_BLOCK, CATEGORIES } from '@/constants';
 
 import style from './Card.module.css';
 
@@ -17,7 +17,7 @@ export default function Card({ category, front, back }) {
 
   useEffect(() => {
     const observer = new ResizeObserver((entries) => {
-      const height = entries[0].contentRect.height + 32;
+      const height = entries[0].contentRect.height + CARD_PADDING_BLOCK;
       setCardHeight(height);
     });
 

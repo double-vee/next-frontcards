@@ -1,3 +1,5 @@
+export const CARD_PADDING_BLOCK = 40;
+
 export const CATEGORIES = [
   { label: 'JavaScript', slug: 'javascript', className: 'javascript' },
   { label: 'string methods', slug: 'string-methods', className: 'methods' },

@@ -1,3 +1,6 @@
+import Snippet from '@/components/Snippet/Snippet';
+import { FUNC_DECLARATION, FUNC_EXPRESSION, SUBSTRING } from '@/snippets';
+
 export const CARDS = [
   {
     category: 'javascript',
@@ -19,18 +22,32 @@ export const CARDS = [
     back: [
       <>
         <span className="term">function declaration</span>: the function can be
-        called before the actual declaration
+        called before the actual declaration:
+        <Snippet>{FUNC_DECLARATION}</Snippet>
       </>,
       <>
         <span className="term">function expression</span>: the function is
         created when the execution flow reaches it so it cannot be called
-        earlier
+        earlier:
+        <Snippet>{FUNC_EXPRESSION}</Snippet>
       </>,
       <>
         in <span className="term">strict mode</span>, a{' '}
         <span className="term">function declaration</span> is scoped to the
         block in which it was declared so the function cannot be called outside
         of it
+      </>,
+    ],
+  },
+  {
+    category: 'string-methods',
+    front: 'substring()',
+    back: [
+      <>
+        <code class="term">{`substring(indexStart)`}</code>
+        <br />
+        <code class="term">{`substring(indexStart, indexEnd)`}</code>
+        <Snippet>{SUBSTRING}</Snippet>
       </>,
     ],
   },
