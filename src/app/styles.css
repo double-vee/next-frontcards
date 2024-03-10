@@ -7,7 +7,7 @@
   --color-yellow: #fff6a0;
   --color-text: #fffff4;
   --color-pencil: #1c222e;
-  --color-ink: #0000ff;
+  --color-ink: #0404f4;
   --color-comment: #7a91b8;
   --max-width-card: 60ch;
   --min-width-card: 380px;
@@ -62,6 +62,7 @@ ul[role='list'] {
 }
 
 code {
+  display: block;
   font-family: var(--font-source-code-pro);
   font-size: 0.938rem;
 }

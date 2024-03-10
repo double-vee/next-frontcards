@@ -10,6 +10,7 @@
 
 .snippet pre code {
   min-width: auto !important;
+  line-height: 1.65;
 }
 
 .snippet pre code div {

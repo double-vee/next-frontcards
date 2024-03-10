@@ -1,5 +1,28 @@
 import Snippet from '@/components/Snippet/Snippet';
-import { FUNC_DECLARATION, FUNC_EXPRESSION, SUBSTRING, AT } from '@/snippets';
+import {
+  FUNC_DECLARATION,
+  FUNC_EXPRESSION,
+  STR_CONCAT,
+  STR_SUBSTRING,
+  STR_SLICE,
+  STR_SPLIT,
+  STR_INCLUDES,
+  STR_REPEAT,
+  STR_SEARCH,
+  STR_AT,
+  ARR_CONCAT,
+  ARR_SLICE,
+  ARR_INCLUDES,
+  ARR_AT,
+  ARR_FIND,
+  ARR_FILTER,
+  ARR_MAP,
+  ARR_JOIN,
+  ARR_REDUCE,
+  ARR_REVERSE,
+  ARR_SPLICE,
+  ARR_FILL,
+} from '@/snippets';
 
 export const CARDS = [
   {
@@ -31,11 +54,16 @@ export const CARDS = [
         earlier:
         <Snippet>{FUNC_EXPRESSION}</Snippet>
       </>,
+    ],
+  },
+  {
+    category: 'string-methods',
+    front: 'concat()',
+    back: [
       <>
-        in <span className="term">strict mode</span>, a{' '}
-        <span className="term">function declaration</span> is scoped to the
-        block in which it was declared so the function cannot be called outside
-        of it
+        <code className="term">{`concat()`}</code>
+        <code className="term">{`concat(str1, str2)`}</code>
+        <Snippet>{STR_CONCAT}</Snippet>
       </>,
     ],
   },
@@ -45,9 +73,105 @@ export const CARDS = [
     back: [
       <>
         <code className="term">{`substring(indexStart)`}</code>
-        <br />
         <code className="term">{`substring(indexStart, indexEnd)`}</code>
-        <Snippet>{SUBSTRING}</Snippet>
+        <Snippet>{STR_SUBSTRING}</Snippet>
+      </>,
+    ],
+  },
+  {
+    category: 'string-methods',
+    front: 'slice()',
+    back: [
+      <>
+        <code className="term">{`slice(indexStart)`}</code>
+        <code className="term">{`slice(indexStart, indexEnd)`}</code>
+        <Snippet>{STR_SLICE}</Snippet>
+      </>,
+    ],
+  },
+  {
+    category: 'string-methods',
+    front: 'split()',
+    back: [
+      <>
+        <code className="term">{`split(separator)`}</code>
+        <code className="term">{`split(separator, limit)`}</code>
+        <Snippet>{STR_SPLIT}</Snippet>
+      </>,
+    ],
+  },
+  {
+    category: 'string-methods',
+    front: 'includes()',
+    back: [
+      <>
+        <code className="term">{`includes(searchString)`}</code>
+        <code className="term">{`includes(searchString, position)`}</code>
+        <Snippet>{STR_INCLUDES}</Snippet>
+      </>,
+    ],
+  },
+  {
+    category: 'string-methods',
+    front: 'repeat()',
+    back: [
+      <>
+        <code className="term">{`repeat(count)`}</code>
+        <Snippet>{STR_REPEAT}</Snippet>
+      </>,
+    ],
+  },
+  {
+    category: 'string-methods',
+    front: 'search()',
+    back: [
+      <>
+        <code className="term">{`search(regexp)`}</code>
+        <Snippet>{STR_SEARCH}</Snippet>
+      </>,
+    ],
+  },
+  {
+    category: 'string-methods',
+    front: 'at()',
+    back: [
+      <>
+        <code className="term">{`at(index)`}</code>
+        <Snippet>{STR_AT}</Snippet>
+      </>,
+    ],
+  },
+  {
+    category: 'array-methods',
+    front: 'concat()',
+    back: [
+      <>
+        <code className="term">{`concat()`}</code>
+        <code className="term">{`concat(value1, value2)`}</code>
+        <Snippet>{ARR_CONCAT}</Snippet>
+      </>,
+    ],
+  },
+  {
+    category: 'array-methods',
+    front: 'slice()',
+    back: [
+      <>
+        <code className="term">{`slice()`}</code>
+        <code className="term">{`slice(start)`}</code>
+        <code className="term">{`slice(start, end)`}</code>
+        <Snippet>{ARR_SLICE}</Snippet>
+      </>,
+    ],
+  },
+  {
+    category: 'array-methods',
+    front: 'includes()',
+    back: [
+      <>
+        <code className="term">{`includes(searchElement)`}</code>
+        <code className="term">{`includes(searchElement, fromIndex)`}</code>
+        <Snippet>{ARR_INCLUDES}</Snippet>
       </>,
     ],
   },
@@ -57,7 +181,98 @@ export const CARDS = [
     back: [
       <>
         <code className="term">{`at(index)`}</code>
-        <Snippet>{AT}</Snippet>
+        <Snippet>{ARR_AT}</Snippet>
+      </>,
+    ],
+  },
+  {
+    category: 'array-methods',
+    front: 'find()',
+    back: [
+      <>
+        <code className="term">{`find((el, i, arr) => { /* … */ })`}</code>
+        <Snippet>{ARR_FIND}</Snippet>
+      </>,
+    ],
+  },
+  {
+    category: 'array-methods',
+    front: 'filter()',
+    back: [
+      <>
+        <code className="term">{`filter((el, i, arr) => { /* … */ })`}</code>
+        <Snippet>{ARR_FILTER}</Snippet>
+      </>,
+    ],
+  },
+  {
+    category: 'array-methods',
+    front: 'map()',
+    back: [
+      <>
+        <code className="term">{`map((el, i, arr) => { /* … */ })`}</code>
+        <Snippet>{ARR_MAP}</Snippet>
+      </>,
+    ],
+  },
+  {
+    category: 'array-methods',
+    front: 'join()',
+    back: [
+      <>
+        <code className="term">{`join()`}</code>
+        <code className="term">{`join(separator)`}</code>
+        <Snippet>{ARR_JOIN}</Snippet>
+      </>,
+    ],
+  },
+  {
+    category: 'array-methods',
+    front: 'reverse()',
+    back: [
+      <>
+        <code className="term">{`reverse()`}</code>
+        <Snippet>{ARR_REVERSE}</Snippet>
+      </>,
+    ],
+  },
+  {
+    category: 'array-methods',
+    front: 'reduce()',
+    back: [
+      <>
+        <pre>
+          <code className="term">{`\
+reduce((accumulator, value) => {
+  return /* … */;
+}, initialValue)\
+        `}</code>
+        </pre>
+        <Snippet>{ARR_REDUCE}</Snippet>
+      </>,
+    ],
+  },
+  {
+    category: 'array-methods',
+    front: 'splice()',
+    back: [
+      <>
+        <code className="term">{`splice(start)`}</code>
+        <code className="term">{`splice(start, deleteCount)`}</code>
+        <code className="term">{`splice(start, deleteCount, item1, itemN)`}</code>
+        <Snippet>{ARR_SPLICE}</Snippet>
+      </>,
+    ],
+  },
+  {
+    category: 'array-methods',
+    front: 'fill()',
+    back: [
+      <>
+        <code className="term">{`fill(value)`}</code>
+        <code className="term">{`fill(value, start)`}</code>
+        <code className="term">{`fill(value, start, end)`}</code>
+        <Snippet>{ARR_FILL}</Snippet>
       </>,
     ],
   },
