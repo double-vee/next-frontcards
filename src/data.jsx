@@ -1,5 +1,5 @@
 import Snippet from '@/components/Snippet/Snippet';
-import { FUNC_DECLARATION, FUNC_EXPRESSION, SUBSTRING } from '@/snippets';
+import { FUNC_DECLARATION, FUNC_EXPRESSION, SUBSTRING, AT } from '@/snippets';
 
 export const CARDS = [
   {
@@ -44,10 +44,20 @@ export const CARDS = [
     front: 'substring()',
     back: [
       <>
-        <code class="term">{`substring(indexStart)`}</code>
+        <code className="term">{`substring(indexStart)`}</code>
         <br />
-        <code class="term">{`substring(indexStart, indexEnd)`}</code>
+        <code className="term">{`substring(indexStart, indexEnd)`}</code>
         <Snippet>{SUBSTRING}</Snippet>
+      </>,
+    ],
+  },
+  {
+    category: 'array-methods',
+    front: 'at()',
+    back: [
+      <>
+        <code className="term">{`at(index)`}</code>
+        <Snippet>{AT}</Snippet>
       </>,
     ],
   },

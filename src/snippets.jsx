@@ -18,3 +18,8 @@ export const SUBSTRING = `\
 "Hello".substring(2, 0); //He
 "Hello".substring(-10, 10); //Hello\
 `;
+
+export const AT = `\
+let animals = ["🦛", "🐋", "🦕"];
+animals.at(-1); //'🦕'\
+`;
