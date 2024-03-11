@@ -5,7 +5,7 @@ import style from './CategorySection.module.css';
 
 export default function CategorySection() {
   return (
-    <section>
+    <section className={style.wrapper}>
       <nav>
         <ul
           className={style.categoryList}

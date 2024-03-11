@@ -3,6 +3,7 @@ import { Poppins, Source_Sans_3, Source_Code_Pro } from 'next/font/google';
 import MainWrapper from '@/components/MainWrapper/MainWrapper';
 import Header from '@/components/Header/Header';
 import Footer from '@/components/Footer/Footer';
+import CategorySection from '@/components/CategorySection/CategorySection';
 
 import './styles.css';
 
@@ -36,6 +37,7 @@ export default function RootLayout({ children }) {
       <body>
         <MainWrapper>
           <Header />
+          <CategorySection />
           {children}
           <Footer />
         </MainWrapper>

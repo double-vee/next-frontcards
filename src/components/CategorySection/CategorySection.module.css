@@ -1,3 +1,7 @@
+.wrapper {
+  margin-bottom: 2rem;
+}
+
 .categoryList {
   display: flex;
   flex-flow: row wrap;
@@ -19,15 +23,15 @@
   padding: 0.5rem 0.75rem;
 }
 
-.react:hover,
-.react:focus {
+.react a:hover,
+.react a:focus {
   background-color: var(--color-light-blue);
 }
 
-.javascript:hover,
-.javascript:focus,
-.methods:hover,
-.methods:focus {
+.javascript a:hover,
+.javascript a:focus,
+.methods a:hover,
+.methods a:focus {
   background-color: var(--color-yellow);
 }
 
