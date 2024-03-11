@@ -21,7 +21,7 @@
 
 .front,
 .backWrapper {
-  padding: 1.25rem;
+  padding: var(--padding-card);
 }
 
 .front.javascript,

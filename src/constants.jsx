@@ -1,4 +1,4 @@
-export const CARD_PADDING_BLOCK = 40;
+export const CARD_PADDING = 16;
 
 export const CATEGORIES = [
   { label: 'JavaScript', slug: 'javascript', className: 'javascript' },

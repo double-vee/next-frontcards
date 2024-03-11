@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect, useRef } from 'react';
-import { CARD_PADDING_BLOCK, CATEGORIES } from '@/constants';
+import { CARD_PADDING, CATEGORIES } from '@/constants';
 
 import style from './Card.module.css';
 
@@ -17,7 +17,7 @@ export default function Card({ category, front, back }) {
 
   useEffect(() => {
     const observer = new ResizeObserver((entries) => {
-      const height = entries[0].contentRect.height + CARD_PADDING_BLOCK;
+      const height = entries[0].contentRect.height + CARD_PADDING * 2;
       setCardHeight(height);
     });
 
@@ -34,7 +34,10 @@ export default function Card({ category, front, back }) {
 
   return (
     <article
-      style={{ height: cardHeight }}
+      style={{
+        height: cardHeight,
+        '--padding-card': `${CARD_PADDING / 16}rem`,
+      }}
       className={style.wrapper}
       onClick={() => setIsFlipped(!isFlipped)}
     >
