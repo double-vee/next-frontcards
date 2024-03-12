@@ -1,6 +1,6 @@
 import { Poppins, Source_Sans_3, Source_Code_Pro } from 'next/font/google';
 
-import MainWrapper from '@/components/MainWrapper/MainWrapper';
+import SiteWrapper from '@/components/SiteWrapper/SiteWrapper';
 import Header from '@/components/Header/Header';
 import Footer from '@/components/Footer/Footer';
 import CategorySection from '@/components/CategorySection/CategorySection';
@@ -35,12 +35,12 @@ export default function RootLayout({ children }) {
       className={`${poppins.variable} ${source_sans_3.variable} ${source_code_pro.variable}`}
     >
       <body>
-        <MainWrapper>
+        <SiteWrapper>
           <Header />
           <CategorySection />
           {children}
           <Footer />
-        </MainWrapper>
+        </SiteWrapper>
       </body>
     </html>
   );

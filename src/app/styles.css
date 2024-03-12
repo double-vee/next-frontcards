@@ -9,8 +9,10 @@
   --color-pencil: #1c222e;
   --color-ink: #0404f4;
   --color-comment: #7a91b8;
-  --max-width-card: 60ch;
-  --min-width-card: 380px;
+  --min-width-card: 60ch;
+  --max-width-card: 70ch;
+  --max-width-wrapper-medium: 1100px;
+  --max-width-wrapper-large: 1550px;
 }
 
 *,
@@ -78,12 +80,20 @@ code:not(.term, pre code) {
 
 .term {
   color: var(--color-ink);
-  font-size: 1rem;
   font-weight: 600;
+}
+
+code.term {
+  margin-bottom: 0.25rem;
+  font-size: 1rem;
 }
 
 @media (min-width: 550px) {
   main {
     margin-bottom: 3.5rem;
+  }
+
+  code.term {
+    margin-bottom: 0;
   }
 }

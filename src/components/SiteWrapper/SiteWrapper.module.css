@@ -16,7 +16,12 @@
 
 @media (min-width: 1050px) {
   .wrapper {
-    max-width: 1250px;
-    padding-inline: 2rem;
+    max-width: var(--max-width-wrapper-medium);
+  }
+}
+
+@media (min-width: 1555px) {
+  .wrapper {
+    max-width: var(--max-width-wrapper-large);
   }
 }
