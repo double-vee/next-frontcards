@@ -72,8 +72,12 @@ export const CARDS = [
     front: 'substring()',
     back: [
       <>
-        <code className="term">{`substring(indexStart)`}</code>
-        <code className="term">{`substring(indexStart, indexEnd)`}</code>
+        <code className="term">{`substring(start)`}</code>
+        <code className="term">
+          {`substring`}
+          <wbr />
+          {`(start, end)`}
+        </code>
         <Snippet>{STR_SUBSTRING}</Snippet>
       </>,
     ],
@@ -83,8 +87,12 @@ export const CARDS = [
     front: 'slice()',
     back: [
       <>
-        <code className="term">{`slice(indexStart)`}</code>
-        <code className="term">{`slice(indexStart, indexEnd)`}</code>
+        <code className="term">{`slice(start)`}</code>
+        <code className="term">
+          {`slice`}
+          <wbr />
+          {`(start, end)`}
+        </code>
         <Snippet>{STR_SLICE}</Snippet>
       </>,
     ],
@@ -95,7 +103,11 @@ export const CARDS = [
     back: [
       <>
         <code className="term">{`split(separator)`}</code>
-        <code className="term">{`split(separator, limit)`}</code>
+        <code className="term">
+          {`split`}
+          <wbr />
+          {`(separator, limit)`}
+        </code>
         <Snippet>{STR_SPLIT}</Snippet>
       </>,
     ],
@@ -105,8 +117,12 @@ export const CARDS = [
     front: 'includes()',
     back: [
       <>
-        <code className="term">{`includes(searchString)`}</code>
-        <code className="term">{`includes(searchString, position)`}</code>
+        <code className="term">{`includes(str)`}</code>
+        <code className="term">
+          {`includes`}
+          <wbr />
+          {`(str, position)`}
+        </code>
         <Snippet>{STR_INCLUDES}</Snippet>
       </>,
     ],
@@ -169,8 +185,8 @@ export const CARDS = [
     front: 'includes()',
     back: [
       <>
-        <code className="term">{`includes(searchElement)`}</code>
-        <code className="term">{`includes(searchElement, fromIndex)`}</code>
+        <code className="term">{`includes(item)`}</code>
+        <code className="term">{`includes(item, fromIndex)`}</code>
         <Snippet>{ARR_INCLUDES}</Snippet>
       </>,
     ],
@@ -241,13 +257,8 @@ export const CARDS = [
     front: 'reduce()',
     back: [
       <>
-        <pre>
-          <code className="term">{`\
-reduce((accumulator, value) => {
-  return /* … */;
-}, initialValue)\
+        <code className="term">{`reduce((acc, value) => /* … */, initialValue)\
         `}</code>
-        </pre>
         <Snippet>{ARR_REDUCE}</Snippet>
       </>,
     ],

@@ -28,9 +28,9 @@ export const STR_SLICE = `\
 
 export const STR_SPLIT = `\
 "Hello".split(); //['Hello']
+"Hello".split(""); //['H', 'e', 'l', 'l', 'o']
 "Hello".split("", 3); //['H', 'e', 'l']
-"Hello".split(" "); //['Hello']
-"Hello, world".split(", "); //['Hello', 'world']\
+"Hello world".split(" "); //['Hello', 'world']\
 `;
 
 export const STR_INCLUDES = `\
@@ -52,7 +52,7 @@ export const STR_AT = `\
 `;
 
 export const STR_CONCAT = `\
-"Hello".concat(", ", "world") //'Hello, world'\
+"Hello".concat(" world") //'Hello world'\
 `;
 
 export const ARR_CONCAT = `\
