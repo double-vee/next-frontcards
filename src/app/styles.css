@@ -46,6 +46,11 @@ h2 {
   text-wrap: balance;
 }
 
+h2 {
+  font-size: 1.25rem;
+  font-weight: 400;
+}
+
 a {
   color: inherit;
   text-decoration: none;
