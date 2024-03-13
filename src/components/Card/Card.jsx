@@ -7,7 +7,7 @@ import style from './Card.module.css';
 
 export default function Card({ category, front, back }) {
   const [isFlipped, setIsFlipped] = useState(false);
-  const [cardHeight, setCardHeight] = useState(100);
+  const [cardHeight, setCardHeight] = useState(null);
 
   const backRef = useRef();
 
@@ -16,6 +16,10 @@ export default function Card({ category, front, back }) {
   }, []);
 
   useEffect(() => {
+    if (cardHeight === null) {
+      return;
+    }
+
     const observer = new ResizeObserver((entries) => {
       const height = entries[0].contentRect.height + CARD_PADDING * 2;
       setCardHeight(height);
@@ -24,7 +28,7 @@ export default function Card({ category, front, back }) {
     observer.observe(backRef.current);
 
     return () => observer.disconnect();
-  }, []);
+  }, [cardHeight]);
 
   const className = CATEGORIES.find((item) => item.slug === category).className;
 
@@ -35,7 +39,7 @@ export default function Card({ category, front, back }) {
   return (
     <article
       style={{
-        height: cardHeight,
+        height: cardHeight === null ? 100 : cardHeight,
         '--padding-card': `${CARD_PADDING / 16}rem`,
       }}
       className={style.wrapper}
@@ -47,7 +51,9 @@ export default function Card({ category, front, back }) {
         aria-hidden={isFlipped ? 'true' : 'false'}
         tabIndex={isFlipped ? -1 : 0}
       >
-        <h2 className={style.cardTitle}>{front}</h2>
+        <h2 className={style.cardTitle}>
+          {cardHeight === null ? '...' : front}
+        </h2>
       </button>
       <button
         className={`${cardClassName} ${style.back}`}
