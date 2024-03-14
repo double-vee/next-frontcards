@@ -51,9 +51,7 @@ export default function Card({ category, front, back }) {
         aria-hidden={isFlipped ? 'true' : 'false'}
         tabIndex={isFlipped ? -1 : 0}
       >
-        <h2 className={style.cardTitle}>
-          {cardHeight === null ? '...' : front}
-        </h2>
+        <h2 className={style.cardTitle}>{cardHeight === null ? '' : front}</h2>
       </button>
       <button
         className={`${cardClassName} ${style.back}`}

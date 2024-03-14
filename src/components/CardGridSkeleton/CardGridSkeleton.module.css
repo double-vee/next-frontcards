@@ -1,0 +1,53 @@
+.skeletonSection {
+  display: grid;
+  gap: 1rem;
+}
+
+.skeletonCard {
+  display: grid;
+  align-content: center;
+  align-items: baseline;
+  grid-template-columns: repeat(2, 1fr);
+  height: 100px;
+  border-radius: 12px;
+  background-color: var(--color-text);
+}
+
+.emoji {
+  justify-self: end;
+  margin-right: -20px;
+  font-size: 2rem;
+}
+
+.line,
+.line::before,
+.line::after {
+  position: relative;
+  left: 16px;
+  width: 1rem;
+  height: 1px;
+  background-color: var(--color-comment);
+}
+.line::before {
+  content: '';
+  position: absolute;
+  top: -8px;
+  left: -2px;
+}
+
+.line::after {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: 1px;
+  width: 1.125rem;
+}
+
+@media (min-width: 550px) {
+  .skeletonSection {
+    grid-template-columns: repeat(
+      auto-fill,
+      minmax(var(--min-width-card), 1fr)
+    );
+  }
+}
