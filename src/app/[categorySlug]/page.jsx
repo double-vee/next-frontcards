@@ -5,10 +5,14 @@ import CardGrid from '@/components/CardGrid/CardGrid';
 export function generateMetadata({ params }) {
   const label = CATEGORIES.find(
     (category) => params.categorySlug === category.slug
-  ).label;
+  )?.label;
+
+  const title = !label
+    ? 'Not found'
+    : `${label.at(0).toUpperCase()}${label.slice(1)}`;
 
   return {
-    title: `Frontcards | ${label.at(0).toUpperCase()}${label.slice(1)}`,
+    title: `Frontcards | ${title}`,
   };
 }
 
