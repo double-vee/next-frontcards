@@ -11,8 +11,7 @@
 
 .header__intro {
   color: var(--color-comment);
-  font-family: var(--font-poppins);
-  font-size: 0.938rem;
+  font-size: 1rem;
 }
 
 @media (min-width: 550px) {
@@ -21,10 +20,10 @@
   }
 
   .header__title {
-    font-size: 4.5rem;
+    font-size: 4rem;
   }
 
   .header__intro {
-    font-size: 1rem;
+    font-size: 1.125rem;
   }
 }

@@ -1,6 +1,6 @@
 .snippet {
   margin: 0.5rem 0 0 -1.375rem !important;
-  border-radius: 6px !important;
+  border-radius: var(--radius-btn) !important;
 }
 
 .snippet pre {
