@@ -24,14 +24,17 @@
 }
 
 .react a:hover,
-.react a:focus {
+.react a:focus,
+.react.active a {
   background-color: var(--color-light-blue);
 }
 
 .javascript a:hover,
 .javascript a:focus,
+.javascript.active a,
 .methods a:hover,
-.methods a:focus {
+.methods a:focus,
+.methods.active a {
   background-color: var(--color-yellow);
 }
 

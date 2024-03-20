@@ -1,9 +1,15 @@
+'use client';
+
 import Link from 'next/link';
+import { useParams } from 'next/navigation';
+
 import { CATEGORIES } from '@/constants';
 
 import style from './CategorySection.module.css';
 
 export default function CategorySection() {
+  const dynamicParam = useParams().categorySlug;
+
   return (
     <section className={style.wrapper}>
       <nav>
@@ -17,6 +23,7 @@ export default function CategorySection() {
               className={`
             ${style.category}
             ${style[className]}
+            ${dynamicParam === slug ? style.active : undefined}
             `}
             >
               <Link href={`/${slug}`}>{label}</Link>
