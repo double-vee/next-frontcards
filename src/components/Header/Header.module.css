@@ -3,7 +3,7 @@
 }
 
 .header__title {
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.5rem;
   font-size: 2.5rem;
   font-weight: 600;
   line-height: 1;
@@ -17,6 +17,7 @@
 .header__intro {
   color: var(--color-comment);
   font-size: 1rem;
+  font-family: var(--font-poppins);
 }
 
 @media (min-width: 550px) {

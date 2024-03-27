@@ -12,11 +12,13 @@
   perspective: 1600px;
   transform-style: preserve-3d;
   transition: rotate 0.35s cubic-bezier(0.2, 0.2, 0.4, 0.8),
-    transform 0.25s cubic-bezier(0.2, 0.2, 0.4, 0.8);
+    transform 0.2s cubic-bezier(0, 0, 0.4, 0.8),
+    box-shadow 0.2s cubic-bezier(0, 0, 0.4, 0.8);
 }
 
 .card:hover {
   transform: translateY(-2px);
+  box-shadow: 0 4px 10px var(--color-shadow);
 }
 
 .front,
@@ -48,6 +50,7 @@
 }
 
 .cardTitle {
+  margin-bottom: 0;
   font-size: 1.125rem;
   font-weight: 500;
   line-height: 1.4;
