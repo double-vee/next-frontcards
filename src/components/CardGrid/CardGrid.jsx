@@ -1,19 +1,36 @@
 import { notFound } from 'next/navigation';
-import { CARDS } from '@/data';
+
+import { CARDS as JS_CARDS } from '@/data/javascript/data';
+import { CARDS as ARR_CARDS } from '@/data/array-methods/data';
+import { CARDS as STR_CARDS } from '@/data/string-methods/data';
+import { CARDS as REACT_CARDS } from '@/data/react/data';
 import Card from '@/components/Card/Card';
 
 import style from './CardGrid.module.css';
 
 export default async function CardGrid({ slug }) {
-  const filteredCards = CARDS.filter(({ category }) => slug === category);
+  const getCards = () => {
+    switch (slug) {
+      case 'javascript':
+        return JS_CARDS;
+      case 'string-methods':
+        return STR_CARDS;
+      case 'array-methods':
+        return ARR_CARDS;
+      case 'react':
+        return REACT_CARDS;
+    }
+  };
 
-  if (filteredCards.length === 0) {
+  let cards = getCards();
+
+  if (cards.length === 0) {
     notFound();
   }
 
   return (
     <section className={style.cardSection}>
-      {filteredCards.map((card) => (
+      {cards.map((card) => (
         <Card
           key={card.front}
           {...card}

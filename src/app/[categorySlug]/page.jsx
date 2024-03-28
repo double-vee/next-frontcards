@@ -1,4 +1,3 @@
-import { CARDS } from '@/data';
 import { CATEGORIES } from '@/constants';
 import CardGrid from '@/components/CardGrid/CardGrid';
 
@@ -17,7 +16,7 @@ export function generateMetadata({ params }) {
 }
 
 export function generateStaticParams() {
-  return CARDS.map((card) => ({ categorySlug: card.category }));
+  return CATEGORIES.map((category) => ({ categorySlug: category.slug }));
 }
 
 export default function CategoryPage({ params: { categorySlug } }) {
