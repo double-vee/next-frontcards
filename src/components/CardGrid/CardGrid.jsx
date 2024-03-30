@@ -24,8 +24,17 @@ export default async function CardGrid({ slug }) {
 
   let cards = getCards();
 
-  if (cards.length === 0) {
+  if (!cards) {
     notFound();
+  }
+
+  if (cards.length === 0) {
+    return (
+      <section className="not-found">
+        <h1>This category is empty</h1>
+        <p>Try another one.</p>
+      </section>
+    );
   }
 
   return (
