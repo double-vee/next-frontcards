@@ -1,0 +1,41 @@
+.intro {
+  max-width: var(--max-width-card);
+  padding: 0.938rem 1.25rem 1rem;
+  border-radius: var(--radius-card);
+  background-color: var(--color-bg-card);
+  color: var(--color-pencil);
+}
+
+.intro__title {
+  margin-bottom: 0.75rem;
+}
+
+.intro li,
+.intro p:not(:last-of-type) {
+  margin-bottom: 0.5rem;
+}
+
+.intro ul {
+  list-style: none;
+}
+
+.intro p.slogan {
+  margin: 0.875rem -1.25rem;
+  padding: 0.25rem 1.25rem;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-source-code-pro);
+  font-size: 1.125rem;
+  font-weight: 500;
+  letter-spacing: 0.02rem;
+  text-align: center;
+}
+
+code.term {
+  padding-block: 2px;
+}
+
+.emoji {
+  margin-left: -0.25rem;
+  font-size: 1.25rem;
+}
