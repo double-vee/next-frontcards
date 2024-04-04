@@ -1,36 +1,43 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Frontcards
 
-## Getting Started
+I started this project as a small **JavaScript** exercise and a means to unclutter my frontend notes (see the [initial repo](https://github.com/double-vee/js-frontcards)).
 
-First, run the development server:
+Eventually, it turned into a **Next.js** exploration endeavor and a frontend learning tool that might be useful to aspiring developers.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+The app renders a set of rotating cards for each selected frontend category. Each card shows a bunch of notes and/or code snippets.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Categories, notes and snippets will be subsequently added to the database.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Built with
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- React v18
+- Next.js v14
+- CSS modules
+- [Bright](https://bright.codehike.org) (React Server Component for syntax highlighting)
 
-## Learn More
+## Screenshot
 
-To learn more about Next.js, take a look at the following resources:
+<img src="./public/frontcards_3_cols.png" alt="Frontcards app 3-column view">
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Acknowledgments and sources
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+I took the notes while attending courses created by:
 
-## Deploy on Vercel
+- [Scrimba](https://scrimba.com/allcourses?topic=react) teachers Cassidy Williams and Bob Ziroll,
+- [Josh Comeau](https://courses.joshwcomeau.com),
+- Shaun Pelling ([Net Ninja](https://netninja.dev/courses/)),
+- Brad Traversy ([Traversy Media](https://www.traversymedia.com)),
+- the frontend team at [InfoShare Academy](https://infoshareacademy.com).
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Other sources include documentation and tutorials at:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- [MDN Web Docs](https://developer.mozilla.org) (obviously),
+- [The Modern JavaScript Tutorial](https://javascript.info).
+
+## Installation and setup
+
+1. Make sure that `node` and `npm` are installed on your machine.
+2. Clone the repo and jump to the project directory.
+3. Run `npm install` to install dependencies.
+4. Run the development server with `npm run dev`.
+5. Open `http://localhost:3000` with your browser to see the result.
