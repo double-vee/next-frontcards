@@ -1,17 +1,17 @@
 :root {
-  --color-bg: #0d1118;
-  --color-bg-card: #feffe6;
-  --color-bg-code: #edede0;
-  --color-bg-snippet: #1a202d;
-  --color-bg-msg: #bcc8dd;
-  --color-light-blue: #98ecff;
-  --color-yellow: #fff6a0;
-  --color-accent: #e32b4399;
-  --color-text: #fffff4;
-  --color-pencil: #1c222e;
-  --color-ink: #0404f4;
-  --color-comment: #7a91b8;
-  --color-shadow: #48556ed5;
+  --color-bg: hsl(218, 30%, 7%);
+  --color-bg-card: hsl(62, 100%, 95%);
+  --color-bg-code: hsl(60, 27%, 90%);
+  --color-bg-snippet: hsl(221, 27%, 14%);
+  --color-bg-msg: hsl(217, 94%, 94%);
+  --color-text: hsl(60, 100%, 98%);
+  --color-pencil: hsl(220, 24%, 15%);
+  --color-ink: hsl(232, 90%, 48%);
+  --color-comment: hsl(217, 32%, 73%);
+  --color-shadow: hsla(219, 21%, 36%, 0.8);
+  --color-react: hsl(191, 98%, 80%);
+  --color-js: hsl(54, 98%, 77%);
+  --color-accent-transparent: hsla(345, 85%, 62%, 0.6);
   --radius-card: 12px;
   --radius-btn: 6px;
   --radius-code: 4px;
@@ -72,6 +72,10 @@ main a {
   text-underline-offset: 2px;
 }
 
+main a:hover {
+  text-underline-offset: 4px;
+}
+
 button {
   border: none;
   background-color: transparent;
@@ -111,11 +115,10 @@ code.term {
 
 .not-found {
   max-width: 100%;
-  padding: 1rem;
+  padding: 1rem 1.25rem 1.125rem;
   border-radius: var(--radius-card);
   background-color: var(--color-bg-msg);
   color: var(--color-pencil);
-  font-weight: 500;
 }
 
 @media (min-width: 550px) {

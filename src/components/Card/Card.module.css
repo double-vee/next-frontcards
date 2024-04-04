@@ -28,11 +28,11 @@
 
 .front.javascript,
 .front.methods {
-  background-color: var(--color-yellow);
+  background-color: var(--color-js);
 }
 
 .front.react {
-  background-color: var(--color-light-blue);
+  background-color: var(--color-react);
 }
 
 .front.rotate {
