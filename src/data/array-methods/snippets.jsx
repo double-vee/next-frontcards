@@ -27,9 +27,24 @@ let array = [8, "🦕", 6];
 array.find((el) => el > 4); //8\
 `;
 
+export const ARR_FINDLAST = `\
+let array = [8, "🦕", 6];
+array.findLast((el) => el > 4); //6\
+`;
+
 export const ARR_FILTER = `\
 let array = [8, "🦕", 6];
 array.filter((el) => el > 4); //[8, 6]\
+`;
+
+export const ARR_SOME = `\
+let array = [8, "🦕", 6];
+array.some((el) => el > 4); //true\
+`;
+
+export const ARR_EVERY = `\
+let array = [8, "🦕", 6];
+array.every((el) => el > 4); //false\
 `;
 
 export const ARR_MAP = `\
@@ -54,9 +69,42 @@ array.reduce((acc, el) => {
 }, 0); //6\
 `;
 
+export const ARR_POP = `\
+let array = ["🦛", "🐋", "🦕"];
+array.pop(); //'🦕'
+console.log(array); //["🦛", "🐋"]\
+`;
+
+export const ARR_PUSH = `\
+let array = ["🦛", "🦕"];
+array.push("🦑"); //3
+console.log(array); //['🦛', '🦕', '🦑']\
+`;
+
+export const ARR_SHIFT = `\
+let array = ["🦛", "🐋", "🦕"];
+array.shift(); //'🦛'
+console.log(array); //["🐋", "🦕"]\
+`;
+
+export const ARR_UNSHIFT = `\
+let array = ["🦛", "🦕"];
+array.unshift("🦑"); //3
+console.log(array); //['🦑', '🦛', '🦕']\
+`;
+
+export const ARR_SORT = `\
+let array = [6, 12, 4];
+array.sort(); //[12, 4, 6]
+array.sort((a, b) => a - b); //[4, 6, 12]
+array.sort((a, b) => b - a); //[12, 6, 4]
+console.log(array); //[12, 6, 4]\
+`;
+
 export const ARR_REVERSE = `\
 let array = ["🦛", "🐋", "🦕"];
-array.reverse(); //['🦕', '🐋', '🦛']\
+array.reverse(); //['🦕', '🐋', '🦛']
+console.log(array) //['🦕', '🐋', '🦛']\
 `;
 
 export const ARR_SPLICE = `\
@@ -97,4 +145,18 @@ array.fill("🐢", 1, 2);
 > ['🦑', '🐢', '🦕']
 console.log(array);
 > ['🦑', '🐢', '🦕']\
+`;
+
+export const ARR_COPYWITHIN = `\
+let array = ["🦑", "🐋", "🦕"];
+array.copyWithin(0, 1);
+> ['🐋', '🦕', '🦕']
+console.log(array);
+> ['🐋', '🦕', '🦕']
+
+let array = ["🦑", "🐋", "🦕"];
+array.copyWithin(0, 1, 2);
+> ['🐋', '🐋', '🦕']
+console.log(array);
+> ['🐋', '🐋', '🦕']\
 `;

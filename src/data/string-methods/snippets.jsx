@@ -40,3 +40,20 @@ export const STR_AT = `\
 export const STR_CONCAT = `\
 "Hello".concat(" world") //'Hello world'\
 `;
+
+export const STR_PADSTART = `\
+"666".padStart(4, "*") //'*666'\
+`;
+
+export const STR_PADEND = `\
+"666".padEnd(4, "0") //'6660'\
+`;
+
+export const STR_STARTSWITH = `\
+"Hello world".startsWith("world") //false
+"Hello world".startsWith("world", 6) //true\
+`;
+
+export const STR_ENDSWITH = `\
+"Hello world!".endsWith("world!") //true\
+`;

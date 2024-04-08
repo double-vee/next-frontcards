@@ -8,6 +8,10 @@ import {
   STR_REPEAT,
   STR_SEARCH,
   STR_AT,
+  STR_PADSTART,
+  STR_PADEND,
+  STR_STARTSWITH,
+  STR_ENDSWITH,
 } from './snippets';
 
 export const CARDS = [
@@ -109,6 +113,54 @@ export const CARDS = [
       <>
         <code className="term">{`at(index)`}</code>
         <Snippet>{STR_AT}</Snippet>
+      </>,
+    ],
+  },
+  {
+    category: 'string-methods',
+    front: 'padStart(), padEnd()',
+    back: [
+      <>
+        <code className="term">{`padStart(length)`}</code>
+        <code className="term">
+          {`padStart`}
+          <wbr />
+          {`(length, str)`}
+        </code>
+        <Snippet>{STR_PADSTART}</Snippet>
+      </>,
+      <>
+        <code className="term">{`padEnd(length)`}</code>
+        <code className="term">
+          {`padEnd`}
+          <wbr />
+          {`(length, str)`}
+        </code>
+        <Snippet>{STR_PADEND}</Snippet>
+      </>,
+    ],
+  },
+  {
+    category: 'string-methods',
+    front: 'startsWith(), endsWith()',
+    back: [
+      <>
+        <code className="term">{`startsWith(str)`}</code>
+        <code className="term">
+          {`startsWith`}
+          <wbr />
+          {`(str, position)`}
+        </code>
+        <Snippet>{STR_STARTSWITH}</Snippet>
+      </>,
+      <>
+        <code className="term">{`endsWith(str)`}</code>
+        <code className="term">
+          {`endsWith`}
+          <wbr />
+          {`(str, position)`}
+        </code>
+        <Snippet>{STR_ENDSWITH}</Snippet>
       </>,
     ],
   },
