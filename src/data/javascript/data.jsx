@@ -18,6 +18,27 @@ export const CARDS = [
   },
   {
     category: 'javascript',
+    front: 'className vs classList',
+    back: [
+      <>
+        the property <code>className</code> returns the value of the
+        element&apos;s <code>class</code> attribute (a{' '}
+        <span className="term">string</span>)
+      </>,
+      <>
+        <code>classList</code> returns a collection (
+        <span className="term">DOMTokenList</span>) of the element&apos;s
+        classes
+      </>,
+      <>
+        <code>classList</code> can be modified or checked with the methods{' '}
+        <code>add()</code>, <code>remove()</code>, <code>replace()</code>,{' '}
+        <code>toggle()</code>, <code>contains()</code>
+      </>,
+    ],
+  },
+  {
+    category: 'javascript',
     front: 'function declaration vs function expression',
     back: [
       <>

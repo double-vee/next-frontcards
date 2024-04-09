@@ -6,7 +6,9 @@ import {
   STR_SPLIT,
   STR_INCLUDES,
   STR_REPEAT,
+  STR_REPLACE,
   STR_SEARCH,
+  STR_MATCH,
   STR_AT,
   STR_PADSTART,
   STR_PADEND,
@@ -98,11 +100,31 @@ export const CARDS = [
   },
   {
     category: 'string-methods',
+    front: 'replace()',
+    back: [
+      <>
+        <code className="term">{`replace(regexp, str)`}</code>
+        <Snippet>{STR_REPLACE}</Snippet>
+      </>,
+    ],
+  },
+  {
+    category: 'string-methods',
     front: 'search()',
     back: [
       <>
         <code className="term">{`search(regexp)`}</code>
         <Snippet>{STR_SEARCH}</Snippet>
+      </>,
+    ],
+  },
+  {
+    category: 'string-methods',
+    front: 'match()',
+    back: [
+      <>
+        <code className="term">{`match(regexp)`}</code>
+        <Snippet>{STR_MATCH}</Snippet>
       </>,
     ],
   },

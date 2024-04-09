@@ -28,8 +28,21 @@ export const STR_REPEAT = `\
 "hi".repeat(4); //'hihihihi'\
 `;
 
+export const STR_REPLACE = `\
+"hello world !".replace(/\\s/, "_")
+//'hello_world !'
+"hello world !".replace(/\\s/g, "_")
+//'hello_world_!'\
+`;
+
 export const STR_SEARCH = `\
+"Hello World".search(/[A-Z]/); //0
 "hello world".search(/[A-Z]/); //-1\
+`;
+
+export const STR_MATCH = `\
+"Hello World".match(/[A-Z]/g); //['H', 'W']
+"hello world".match(/[A-Z]/g); //null\
 `;
 
 export const STR_AT = `\
