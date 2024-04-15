@@ -38,6 +38,12 @@
   background-color: var(--color-js);
 }
 
+.category a:focus-visible {
+  text-decoration-line: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 2px;
+}
+
 @media (min-width: 550px) {
   .category a {
     font-size: 1.25rem;
