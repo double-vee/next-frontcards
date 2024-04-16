@@ -21,6 +21,11 @@
   box-shadow: 0 4px 10px var(--color-shadow);
 }
 
+.card:focus-visible {
+  outline: 4px solid var(--color-accent);
+  outline-offset: 4px;
+}
+
 .front,
 .backWrapper {
   padding: var(--padding-card);
