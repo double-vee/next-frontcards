@@ -12,7 +12,6 @@
   --color-react: hsl(191, 98%, 80%);
   --color-js: hsl(54, 98%, 77%);
   --color-accent: hsla(345, 85%, 62%);
-  --color-accent-transparent: hsla(345, 85%, 62%, 0.6);
   --radius-card: 12px;
   --radius-btn: 6px;
   --radius-code: 4px;
@@ -70,12 +69,12 @@ main a {
   font-weight: 600;
   text-decoration-line: underline;
   text-decoration-thickness: 2px;
-  text-decoration-skip-ink: auto;
-  text-underline-offset: 2px;
+  text-underline-offset: 4px;
 }
 
-main a:hover {
-  text-underline-offset: 4px;
+main a:hover,
+main a:focus-visible {
+  text-underline-offset: 2px;
 }
 
 main a:focus-visible {

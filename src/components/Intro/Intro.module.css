@@ -10,13 +10,12 @@
   margin-bottom: 0.75rem;
 }
 
-.intro li,
-.intro p:not(:last-of-type) {
-  margin-bottom: 0.5rem;
+.intro p {
+  padding-left: 1.72rem;
 }
 
-.intro ul {
-  list-style: none;
+.intro p:not(:last-of-type) {
+  margin-bottom: 0.5rem;
 }
 
 .intro p.slogan {
@@ -36,6 +35,6 @@ code.term {
 }
 
 .emoji {
-  margin-left: -0.25rem;
+  margin-left: -1.97rem;
   font-size: 1.25rem;
 }
