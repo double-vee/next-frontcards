@@ -1,5 +1,7 @@
 import Link from 'next/link';
 
+import Line from '@/components/Line/Line';
+
 import style from './Header.module.css';
 
 export default function Header() {
@@ -13,7 +15,11 @@ export default function Header() {
         Frontcards*
       </Link>
       <p className={style.header__intro}>
-        *Notes and snippets for <span className={style.line}>wannabe</span>{' '}
+        *Notes and snippets for{' '}
+        <span className={style.line}>
+          <Line />
+          wannabe
+        </span>{' '}
         frontend developers.
       </p>
     </header>
