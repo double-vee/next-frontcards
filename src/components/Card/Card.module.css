@@ -1,5 +1,6 @@
 .wrapper {
   position: relative;
+  perspective: 100rem;
 }
 
 .card {
@@ -9,16 +10,13 @@
   border-radius: var(--radius-card);
   color: var(--color-pencil);
   backface-visibility: hidden;
-  perspective: 1600px;
   transform-style: preserve-3d;
-  transition: rotate 0.35s cubic-bezier(0.2, 0.2, 0.4, 0.8),
-    transform 0.2s cubic-bezier(0, 0, 0.4, 0.8),
-    box-shadow 0.2s cubic-bezier(0, 0, 0.4, 0.8);
+  transition: rotate 0.3s cubic-bezier(0.2, 0.2, 0.4, 0.8),
+    transform 0.2s cubic-bezier(0, 0, 0.4, 0.8);
 }
 
 .card:hover {
   transform: translateY(-2px);
-  box-shadow: 0 4px 10px var(--color-shadow);
 }
 
 .card:focus-visible {
@@ -85,15 +83,15 @@
 
 @media (min-width: 550px) {
   .front.rotate {
-    rotate: 1 0.1 0.2 180deg;
+    rotate: x 180deg;
   }
 
   .back {
-    rotate: 1 0.1 0.2 -180deg;
+    rotate: x -180deg;
   }
 
   .back.rotate {
-    rotate: 1 0.1 0.2 0deg;
+    rotate: x 0deg;
   }
 
   .cardTitle {
