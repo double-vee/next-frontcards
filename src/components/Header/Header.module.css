@@ -1,5 +1,4 @@
 .header {
-  margin-bottom: 2rem;
   font-family: var(--font-poppins);
 }
 
@@ -38,7 +37,7 @@
 
 @media (min-width: 550px) {
   .header {
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
   }
 
   .header__title {

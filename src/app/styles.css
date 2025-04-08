@@ -39,10 +39,6 @@ body {
   text-size-adjust: none;
 }
 
-main {
-  margin-bottom: 2.5rem;
-}
-
 h1,
 h2 {
   font-family: var(--font-poppins);
@@ -62,10 +58,10 @@ p:not(:last-of-type) {
 a {
   color: inherit;
   text-decoration: none;
+  transition: text-underline-offset 0.2s cubic-bezier(0.65, 0, 0.165, 1);
 }
 
 main a {
-  border-radius: var(--radius-code);
   font-weight: 600;
   text-decoration-line: underline;
   text-decoration-thickness: 2px;
@@ -74,7 +70,7 @@ main a {
 
 main a:hover,
 main a:focus-visible {
-  text-underline-offset: 1px;
+  text-underline-offset: 4px;
 }
 
 main a:focus-visible {
@@ -136,10 +132,6 @@ code.term {
 }
 
 @media (min-width: 550px) {
-  main {
-    margin-bottom: 3.5rem;
-  }
-
   code.term {
     margin-bottom: 0;
   }

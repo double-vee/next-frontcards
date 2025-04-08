@@ -1,16 +1,18 @@
 .wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
   min-height: 100%;
   width: 100%;
   margin-inline: auto;
-  padding: 2rem 1rem;
-  display: flex;
-  flex-direction: column;
+  padding: 1.5rem;
+  overflow: clip;
 }
 
 @media (min-width: 550px) {
   .wrapper {
     max-width: var(--max-width-card);
-    padding-top: 4rem;
+    padding: 2rem;
   }
 }
 

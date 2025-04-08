@@ -1,5 +1,5 @@
 export const FUNC_DECLARATION = `\
-sayHi(); //'Hi!'
+sayHi(); // 'Hi!'
 function sayHi() {
   console.log("Hi!");
 }\
@@ -9,7 +9,7 @@ export const FUNC_EXPRESSION = `\
 let sayHi = function() {
   console.log("Hi!");
 }
-sayHi(); //'Hi!'\
+sayHi(); // 'Hi!'\
 `;
 
 export const ARROW_OBJ_METHOD = `\
@@ -22,13 +22,13 @@ let cat = {
     console.log(this.name);
   }
 }
-cat.sayName(); //undefined
-cat.sayNameProperly(); //Bix\
+cat.sayName(); // undefined
+cat.sayNameProperly(); // Bix\
 `;
 
 export const ARROW_EVENT_HANDLER = `\
 btn.addEventListener('click', () => {
-  console.log(this); //undefined
+  console.log(this); // undefined
 })\
 `;
 

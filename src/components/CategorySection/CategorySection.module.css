@@ -1,7 +1,3 @@
-.wrapper {
-  margin-bottom: 2rem;
-}
-
 .categoryList {
   display: flex;
   flex-flow: row wrap;

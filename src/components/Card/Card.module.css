@@ -39,17 +39,17 @@
 }
 
 .front.rotate {
-  rotate: x 180deg;
+  rotate: y 180deg;
 }
 
 .back {
   background-color: var(--color-bg-card);
   text-align: left;
-  rotate: x -180deg;
+  rotate: y -180deg;
 }
 
 .back.rotate {
-  rotate: x 0deg;
+  rotate: y 0deg;
 }
 
 .cardTitle {
