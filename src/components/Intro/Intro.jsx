@@ -24,16 +24,17 @@ export default function Intro() {
       <p className={style.slogan}>Ease the learning curve with Frontcards</p>
       <p>
         <span className={style.emoji}>🦕</span> Select a category above to start
-        the review of the JavaScript methods or other frontend topics.
+        reviewing JavaScript methods or other frontend topics.
       </p>
       <p>
         <span className={style.emoji}>🦑</span> Check out the{' '}
-        <Link
+        <a
           href="https://github.com/double-vee/next-frontcards"
           target="_blank"
+          rel="noopener noreferrer"
         >
           GitHub repo
-        </Link>
+        </a>
         .
       </p>
     </section>
