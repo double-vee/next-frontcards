@@ -48,16 +48,14 @@ export default function Card({ category, front, back }) {
       <button
         className={`${cardClassName} ${style.front}`}
         aria-label="Show notes"
-        aria-hidden={isFlipped ? 'true' : 'false'}
-        tabIndex={isFlipped ? -1 : 0}
+        inert={isFlipped ? 'true' : undefined}
       >
         <h2 className={style.cardTitle}>{cardHeight === null ? '' : front}</h2>
       </button>
       <button
         className={`${cardClassName} ${style.back}`}
         aria-label="Hide notes"
-        aria-hidden={isFlipped ? 'false' : 'true'}
-        tabIndex={isFlipped ? 0 : -1}
+        inert={isFlipped ? undefined : 'true'}
       >
         <div
           className={style.backWrapper}
