@@ -1,29 +1,29 @@
 .wrapper {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
-  min-height: 100%;
+  gap: var(--gap-wrapper);
+  min-height: 100dvh;
   width: 100%;
   margin-inline: auto;
-  padding: 1.5rem;
+  padding: var(--padding-wrapper-xs);
   overflow: clip;
 }
 
-@media (min-width: 550px) {
+@media (width > 35rem) {
   .wrapper {
-    max-width: var(--max-width-card);
-    padding: 2rem;
+    max-width: var(--max-width-wrapper-sm);
+    padding: var(--padding-wrapper);
   }
 }
 
-@media (min-width: 1050px) {
+@media (width > 65.75rem) {
   .wrapper {
-    max-width: var(--max-width-wrapper-medium);
+    max-width: var(--max-width-wrapper-md);
   }
 }
 
-@media (min-width: 1555px) {
+@media (width > 97rem) {
   .wrapper {
-    max-width: var(--max-width-wrapper-large);
+    max-width: var(--max-width-wrapper-lg);
   }
 }

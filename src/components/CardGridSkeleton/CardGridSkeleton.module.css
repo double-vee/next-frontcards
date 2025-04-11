@@ -1,6 +1,10 @@
 .skeletonSection {
   display: grid;
-  gap: 1rem;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(min(100%, var(--min-width-card)), 1fr)
+  );
+  gap: var(--gap-cards);
 }
 
 .skeletonCard {
@@ -8,14 +12,14 @@
   align-content: center;
   align-items: baseline;
   grid-template-columns: repeat(2, 1fr);
-  height: 100px;
+  height: 6.25rem;
   border-radius: var(--radius-card);
-  background-color: #1a263a;
+  background-color: var(--color-bg-card-skeleton);
 }
 
 .emoji {
   justify-self: end;
-  margin-right: -20px;
+  margin-right: -1.25rem;
   font-size: 1.5rem;
 }
 
@@ -44,15 +48,6 @@
   width: 1rem;
 }
 
-@media (min-width: 550px) {
-  .skeletonSection {
-    grid-template-columns: repeat(
-      auto-fill,
-      minmax(var(--min-width-card), 1fr)
-    );
-  }
-}
-
 @media (prefers-reduced-motion: no-preference) {
   .skeletonCard {
     animation: glow 1000ms ease-in-out infinite alternate;
@@ -61,6 +56,6 @@
 
 @keyframes glow {
   to {
-    background-color: #1a263a80;
+    background-color: var(--color-bg-card-skeleton-secondary);
   }
 }

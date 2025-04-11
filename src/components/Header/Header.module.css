@@ -17,7 +17,8 @@
 }
 
 .header__title:focus-visible {
-  outline: 4px solid var(--color-accent);
+  outline: var(--outline);
+  outline-offset: var(--outline-offset);
 }
 
 .header__intro {
@@ -35,7 +36,7 @@
   width: 100%;
 }
 
-@media (min-width: 550px) {
+@media (width > 35rem) {
   .header {
     margin-bottom: 2rem;
   }
