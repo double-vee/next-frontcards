@@ -1,34 +1,14 @@
 'use client';
 
-import { useState, useEffect, useRef } from 'react';
+import { useState } from 'react';
 import { CARD_PADDING, CATEGORIES, INITIAL_CARD_HEIGHT } from '@/constants';
+import useCardHeight from '@/hooks/useCardHeight';
 
 import style from './Card.module.css';
 
 export default function Card({ category, front, back }) {
   const [isFlipped, setIsFlipped] = useState(false);
-  const [cardHeight, setCardHeight] = useState(null);
-
-  const backRef = useRef();
-
-  useEffect(() => {
-    setCardHeight(backRef.current.scrollHeight);
-  }, []);
-
-  useEffect(() => {
-    if (cardHeight === null) {
-      return;
-    }
-
-    const observer = new ResizeObserver((entries) => {
-      const contentHeight = entries[0].contentRect.height;
-      setCardHeight(contentHeight + CARD_PADDING * 2);
-    });
-
-    observer.observe(backRef.current);
-
-    return () => observer.disconnect();
-  }, [cardHeight]);
+  const [backRef, cardHeight] = useCardHeight();
 
   const className = CATEGORIES.find((item) => item.slug === category).className;
 
