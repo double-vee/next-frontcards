@@ -16,7 +16,7 @@
 
 .category a {
   display: block;
-  padding: 0.5rem 0.75rem;
+  padding: var(--padding-btn);
 }
 
 .react a:hover,

@@ -16,19 +16,29 @@
   --color-accent: hsl(345deg 85% 62%);
 
   --size-base: 0.25rem;
-  --radius-card: calc(var(--size-base) * 3);
-  --radius-btn: calc(var(--size-base) * 2);
+
+  --radius-card: calc(var(--size-base) * 4);
+  --radius-snippet: calc(var(--size-base) * 3);
+  --radius-btn: calc(var(--size-base) * 3);
   --radius-code: var(--size-base);
+
   --outline-width: var(--size-base);
   --outline: var(--outline-width) solid var(--color-accent);
   --outline-offset: 0;
 
   --space-base: 1rem;
+
   --gap-categories: calc(var(--space-base) * 0.5);
   --gap-cards: calc(var(--space-base) * 1);
   --gap-wrapper: calc(var(--space-base) * 2);
+
   --padding-wrapper-xs: calc(var(--space-base) * 1.5);
   --padding-wrapper: calc(var(--space-base) * 2);
+  --padding-intro: 0.938rem 1.25rem 1rem;
+  --padding-msg: 1rem 1.25rem 1.125rem;
+  --padding-btn: 0.5rem 0.75rem;
+  --padding-snippet: 0.75rem 1rem;
+  --padding-code: 0.063rem 0.25rem;
 
   --min-width-card: 60ch;
   --max-width-card: 70ch;
@@ -125,7 +135,7 @@ code {
 code:not(.term, pre code) {
   display: inline-block;
   border-radius: var(--radius-code);
-  padding: 1px 4px;
+  padding: var(--padding-code);
   background-color: var(--color-bg-code);
   font-weight: 600;
   line-height: 1.2;
@@ -152,7 +162,7 @@ code.term {
 
 .not-found {
   max-width: 100%;
-  padding: 1rem 1.25rem 1.125rem;
+  padding: var(--padding-msg);
   border-radius: var(--radius-card);
   background-color: var(--color-bg-msg);
   color: var(--color-pencil);

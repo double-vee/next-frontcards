@@ -1,4 +1,5 @@
 export const CARD_PADDING = 16;
+export const INITIAL_CARD_HEIGHT = 100;
 
 export const CATEGORIES = [
   { label: 'JavaScript', slug: 'javascript', className: 'javascript' },

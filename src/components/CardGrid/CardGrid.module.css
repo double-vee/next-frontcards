@@ -5,4 +5,5 @@
     minmax(min(100%, var(--min-width-card)), 1fr)
   );
   gap: var(--gap-cards);
+  align-items: start;
 }

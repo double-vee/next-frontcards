@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect, useRef } from 'react';
-import { CARD_PADDING, CATEGORIES } from '@/constants';
+import { CARD_PADDING, CATEGORIES, INITIAL_CARD_HEIGHT } from '@/constants';
 
 import style from './Card.module.css';
 
@@ -21,8 +21,8 @@ export default function Card({ category, front, back }) {
     }
 
     const observer = new ResizeObserver((entries) => {
-      const height = entries[0].contentRect.height + CARD_PADDING * 2;
-      setCardHeight(height);
+      const contentHeight = entries[0].contentRect.height;
+      setCardHeight(contentHeight + CARD_PADDING * 2);
     });
 
     observer.observe(backRef.current);
@@ -39,7 +39,7 @@ export default function Card({ category, front, back }) {
   return (
     <article
       style={{
-        height: cardHeight === null ? 100 : cardHeight,
+        '--min-height-card': `${(cardHeight ?? INITIAL_CARD_HEIGHT) / 16}rem`,
         '--padding-card': `${CARD_PADDING / 16}rem`,
       }}
       className={style.wrapper}
