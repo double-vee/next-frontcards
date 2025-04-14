@@ -11,8 +11,7 @@
   line-height: 1;
 }
 
-.header__title:hover,
-.header__title:focus-visible {
+.header__title:hover {
   color: var(--color-comment);
 }
 

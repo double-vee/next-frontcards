@@ -5,36 +5,29 @@
 }
 
 .category {
-  border-radius: var(--radius-btn);
-  background-color: var(--color-text);
   color: var(--color-pencil);
   font-family: var(--font-poppins);
   font-size: 1.125rem;
   font-weight: 600;
-  overflow: hidden;
 }
 
 .category a {
   display: block;
+  border-radius: var(--radius-btn);
   padding: var(--padding-btn);
+  background-color: var(--color-bg-category, var(--color-paper));
 }
 
-.react a:hover,
-.react a:focus,
-.react.active a {
-  background-color: var(--color-react);
+.category:is(.react, .react.active) :is(a:hover, a:focus, a:active) {
+  --color-bg-category: var(--color-react);
 }
 
-.javascript a:hover,
-.javascript a:focus,
-.javascript.active a,
-.methods a:hover,
-.methods a:focus,
-.methods.active a {
-  background-color: var(--color-js);
+.category:is(.javascript, .methods, .javascript.active, .methods.active)
+  :is(a:hover, a:focus, a:active) {
+  --color-bg-category: var(--color-js);
 }
 
-.category:has(a:focus-visible) {
+.category a:focus-visible {
   outline: var(--outline);
   outline-offset: var(--outline-offset);
 }

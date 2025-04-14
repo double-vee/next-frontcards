@@ -12,8 +12,8 @@
   color: var(--color-pencil);
   backface-visibility: hidden;
   transform-style: preserve-3d;
-  transition: rotate 0.3s var(--easing-fn-rotate),
-    transform 0.2s var(--easing-fn-translate);
+  transition: rotate 0.45s var(--easing-rotate),
+    transform 0.75s var(--easing-spring);
 }
 
 .card:hover {
@@ -30,13 +30,12 @@
   padding: var(--padding-card, 1rem);
 }
 
-.front.javascript,
-.front.methods {
-  background-color: var(--color-js);
+.front {
+  background-color: var(--color-bg-category, var(--color-js));
 }
 
 .front.react {
-  background-color: var(--color-react);
+  --color-bg-category: var(--color-react);
 }
 
 .front.rotate {
