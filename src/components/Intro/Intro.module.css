@@ -65,6 +65,10 @@ code.term {
         infinite;
     }
 
+    .intro p.slogan:hover .slogan__slice {
+      animation-play-state: paused;
+    }
+
     .slogan__slice:nth-child(2) {
       --delay: 20s;
       display: block;
