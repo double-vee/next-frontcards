@@ -18,12 +18,15 @@
   padding-left: 1.72rem;
 }
 
+.marquee {
+  margin: 0.875rem calc(var(--padding-intro-inline) * -1);
+  background-color: var(--color-bg);
+}
+
 .intro p.slogan {
   position: relative;
   min-height: 35px;
-  margin: 0.875rem calc(var(--padding-intro-inline) * -1);
   padding: 0.25rem calc(var(--padding-intro-inline));
-  background-color: var(--color-bg);
   color: var(--color-paper);
   font-family: var(--font-source-code-pro);
   font-size: 1.125rem;
@@ -53,6 +56,16 @@ code.term {
 
 @media (prefers-reduced-motion: no-preference) {
   @media (width > 38.75rem) {
+    .intro p.slogan {
+      mask-image: linear-gradient(
+        to right,
+        transparent,
+        black var(--padding-intro-inline),
+        black calc(100% - var(--padding-intro-inline)),
+        transparent
+      );
+    }
+
     .slogan__slice {
       position: absolute;
       left: 0;

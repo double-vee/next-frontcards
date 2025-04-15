@@ -21,14 +21,16 @@ export default function Intro() {
         <code className={style.term}>search()</code> and{' '}
         <code className={style.term}>match()</code>?
       </p>
-      <p className={style.slogan}>
-        <span className={style.slogan__slice}>
-          Ease the learning curve with Frontcards
-        </span>
-        <span className={style.slogan__slice}>
-          Ease the learning curve with Frontcards
-        </span>
-      </p>
+      <div className={style.marquee}>
+        <p className={style.slogan}>
+          <span className={style.slogan__slice}>
+            Ease the learning curve with Frontcards
+          </span>
+          <span className={style.slogan__slice}>
+            Ease the learning curve with Frontcards
+          </span>
+        </p>
+      </div>
       <p>
         <span className={style.emoji}>🦕</span> Select a category above to start
         reviewing JavaScript methods or other frontend topics.
