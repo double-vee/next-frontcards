@@ -1,7 +1,7 @@
 .wrapper {
   position: relative;
   perspective: 100rem;
-  min-height: var(--min-height-card, 6.25rem);
+  min-height: var(--min-height-card);
 }
 
 .card {
@@ -27,7 +27,7 @@
 
 .front,
 .backWrapper {
-  padding: var(--padding-card, 1rem);
+  padding: var(--padding-card);
 }
 
 .front {

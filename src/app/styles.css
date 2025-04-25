@@ -36,11 +36,13 @@
   --padding-wrapper: calc(var(--space-base) * 2);
   --padding-intro: 0.938rem var(--padding-intro-inline) 1rem;
   --padding-intro-inline: 1.25rem;
+  --padding-card: var(--space-base);
   --padding-msg: 1rem 1.25rem 1.125rem;
   --padding-btn: 0.5rem 0.75rem;
   --padding-snippet: 0.75rem 1rem;
   --padding-code: 0.063rem 0.25rem;
 
+  --min-height-card: 6.25rem;
   --min-width-card: 60ch;
   --max-width-card: 70ch;
   --max-width-wrapper-sm: calc(

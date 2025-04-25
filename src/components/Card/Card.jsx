@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { CARD_PADDING, CATEGORIES, INITIAL_CARD_HEIGHT } from '@/constants';
+import { CATEGORIES } from '@/constants';
 import useCardHeight from '@/hooks/useCardHeight';
 
 import style from './Card.module.css';
@@ -18,10 +18,7 @@ export default function Card({ category, front, back }) {
 
   return (
     <article
-      style={{
-        '--min-height-card': `${(cardHeight ?? INITIAL_CARD_HEIGHT) / 16}rem`,
-        '--padding-card': `${CARD_PADDING / 16}rem`,
-      }}
+      style={cardHeight && { '--min-height-card': `${cardHeight / 16}rem` }}
       className={style.wrapper}
       onClick={() => setIsFlipped(!isFlipped)}
     >
@@ -30,7 +27,7 @@ export default function Card({ category, front, back }) {
         aria-label="Show notes"
         inert={isFlipped ? 'true' : undefined}
       >
-        <h2 className={style.cardTitle}>{cardHeight === null ? '' : front}</h2>
+        {cardHeight && <h2 className={style.cardTitle}>{front}</h2>}
       </button>
       <button
         className={`${cardClassName} ${style.back}`}
