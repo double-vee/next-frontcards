@@ -56,46 +56,57 @@
       2
   );
 
-  --easing-spring: linear(
-    0,
-    0.008 1.2%,
-    0.035 2.5%,
-    0.077 3.8%,
-    0.14 5.3%,
-    0.281 8%,
-    0.716 15.4%,
-    0.833 17.7%,
-    0.929 19.9%,
-    1.004 22%,
-    1.066 24.2%,
-    1.111 26.4%,
-    1.14 28.6%,
-    1.159 32%,
-    1.152 35.8%,
-    1.127 39.4%,
-    1.018 51.6%,
-    0.993 56.1%,
-    0.979 60.7%,
-    0.975 67.8%,
-    0.999 86.7%,
-    1
-  );
-  --easing-rotate: linear(
-    0,
-    0.006 1.6%,
-    0.023 3.3%,
-    0.097 7.3%,
-    0.19 11%,
-    0.507 22.4%,
-    0.676 29.7%,
-    0.794 36.4%,
-    0.882 43.5%,
-    0.921 47.9%,
-    0.951 52.6%,
-    0.991 63.5%,
-    1.006 76.9%,
-    1
-  );
+  --duration-default: 0.125s;
+  --duration-spring: 0.2s;
+  --duration-rotate: 0.3s;
+  --easing-spring: cubic-bezier(0, 0, 0.4, 0.8);
+  --easing-rotate: cubic-bezier(0.2, 0.2, 0.4, 0.8);
+
+  @supports (transition-timing-function: linear(1, 2, 3)) {
+    --duration-default: 0.25s;
+    --duration-spring: 0.75s;
+    --duration-rotate: 0.45s;
+    --easing-spring: linear(
+      0,
+      0.008 1.2%,
+      0.035 2.5%,
+      0.077 3.8%,
+      0.14 5.3%,
+      0.281 8%,
+      0.716 15.4%,
+      0.833 17.7%,
+      0.929 19.9%,
+      1.004 22%,
+      1.066 24.2%,
+      1.111 26.4%,
+      1.14 28.6%,
+      1.159 32%,
+      1.152 35.8%,
+      1.127 39.4%,
+      1.018 51.6%,
+      0.993 56.1%,
+      0.979 60.7%,
+      0.975 67.8%,
+      0.999 86.7%,
+      1
+    );
+    --easing-rotate: linear(
+      0,
+      0.006 1.6%,
+      0.023 3.3%,
+      0.097 7.3%,
+      0.19 11%,
+      0.507 22.4%,
+      0.676 29.7%,
+      0.794 36.4%,
+      0.882 43.5%,
+      0.921 47.9%,
+      0.951 52.6%,
+      0.991 63.5%,
+      1.006 76.9%,
+      1
+    );
+  }
 }
 
 *,
@@ -134,9 +145,9 @@ p:not(:last-of-type) {
 a {
   color: inherit;
   text-decoration: none;
-  transition: background-color 0.3s var(--easing-spring),
-    color 0.3s var(--easing-spring),
-    text-underline-offset 0.3s var(--easing-spring);
+  transition: background-color var(--duration-default) var(--easing-spring),
+    color var(--duration-default) var(--easing-spring),
+    text-underline-offset var(--duration-default) var(--easing-spring);
 }
 
 main a {

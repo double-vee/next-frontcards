@@ -12,8 +12,8 @@
   color: var(--color-pencil);
   backface-visibility: hidden;
   transform-style: preserve-3d;
-  transition: rotate 0.45s var(--easing-rotate),
-    transform 0.75s var(--easing-spring);
+  transition: rotate var(--duration-rotate) var(--easing-rotate),
+    transform var(--duration-spring) var(--easing-spring);
 }
 
 .card:hover {
