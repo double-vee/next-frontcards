@@ -11,7 +11,7 @@ export default function CategorySection() {
   const dynamicParam = useParams().categorySlug;
 
   return (
-    <section className={style.wrapper}>
+    <section>
       <nav>
         <ul
           className={style.categoryList}

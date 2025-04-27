@@ -18,12 +18,11 @@
   background-color: var(--color-bg-category, var(--color-paper));
 }
 
-.category:is(.react, .react.active) :is(a:hover, a:focus, a:active) {
+.category:is(.react) :is(a:hover, a:focus, a:active, .active a) {
   --color-bg-category: var(--color-react);
 }
 
-.category:is(.javascript, .methods, .javascript.active, .methods.active)
-  :is(a:hover, a:focus, a:active) {
+.category:is(.javascript, .methods) :is(a:hover, a:focus, a:active, .active a) {
   --color-bg-category: var(--color-js);
 }
 
